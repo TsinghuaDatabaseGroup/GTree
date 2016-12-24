@@ -1,0 +1,142 @@
+In file included from hierobjsearch.h:13:0,
+                 from hierobjsearch.cc:1:
+objectsearch.h: In constructor ‘ObjectSearchResult::ObjectSearchResult(int, float)’:
+objectsearch.h:29:32: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+         { m_path.append((void*)m_nid); };
+                                ^
+objectsearch.h: In constructor ‘ObjectSearchResult::ObjectSearchResult(int, const Collection::Array&, float)’:
+objectsearch.h:32:32: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+         { m_path.append((void*)m_nid); };
+                                ^
+hierobjsearch.cc: In static member function ‘static void HierObjectSearch::rangeSearch(HierGraph&, NodeMapping&, GraphMapping&, int, float, Collection::Array&, int&, int&)’:
+hierobjsearch.cc:83:34: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+         if (visited.in((void*)c->m_nid))
+                                  ^
+hierobjsearch.cc:90:34: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+         visited.insert((void*)c->m_nid);
+                                  ^
+hierobjsearch.cc:100:58: error: cast from ‘void*’ to ‘int’ loses precision [-fpermissive]
+             int idist = (int)pending.get(edge->m_neighbor);
+                                                          ^
+hierobjsearch.cc:108:50: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+             pending.put(edge->m_neighbor, (void*)idist);
+                                                  ^
+hierobjsearch.cc: In static member function ‘static void HierObjectSearch::kNNSearch(HierGraph&, NodeMapping&, GraphMapping&, int, int, Collection::Array&, int&, int&)’:
+hierobjsearch.cc:169:34: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+         if (visited.in((void*)c->m_nid))
+                                  ^
+hierobjsearch.cc:176:34: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+         visited.insert((void*)c->m_nid);
+                                  ^
+hierobjsearch.cc:186:58: error: cast from ‘void*’ to ‘int’ loses precision [-fpermissive]
+             int idist = (int)pending.get(edge->m_neighbor);
+                                                          ^
+hierobjsearch.cc:194:50: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+             pending.put(edge->m_neighbor, (void*)idist);
+                                                  ^
+hierobjsearch.cc: In static member function ‘static void HierObjectSearch::kNNSearch(HierGraph&, NodeMapping&, GraphMapping&, int, int, Collection::Array&, int&, int&, Collection::Array&)’:
+hierobjsearch.cc:259:34: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+         if (visited.in((void*)c->m_nid))
+                                  ^
+hierobjsearch.cc:266:34: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+         visited.insert((void*)c->m_nid);
+                                  ^
+hierobjsearch.cc:267:36: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+         a_visited.append((void*)c->m_nid);
+                                    ^
+hierobjsearch.cc:277:58: error: cast from ‘void*’ to ‘int’ loses precision [-fpermissive]
+             int idist = (int)pending.get(edge->m_neighbor);
+                                                          ^
+hierobjsearch.cc:285:50: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+             pending.put(edge->m_neighbor, (void*)idist);
+                                                  ^
+hierobjsearch.cc: In function ‘void updateQueryMap(GraphMapping&, GraphMapping&, BorderNode*, int, int, Collection::Array&)’:
+hierobjsearch.cc:341:50: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+                         a_hits.append((void*)sc->m_subnetid);
+                                                  ^
+hierobjsearch.cc: In function ‘void findPath(BorderNode*, GraphMapping&, GraphMapping&, int, Collection::Array&, Collection::Array&)’:
+hierobjsearch.cc:384:54: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+                             a_wait.append((void*)sc->m_subnetid);
+                                                      ^
+hierobjsearch.cc: In constructor ‘HierObjectSearch::groupRangeSearch(HierGraph&, NodeMapping&, GraphMapping&, const int*, const float*, int, Collection::Array&, int&, int&)::carrier::carrier(int, int, float)’:
+hierobjsearch.cc:442:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+                 m_path.append((void*)m_nid);
+                                      ^
+hierobjsearch.cc: In constructor ‘HierObjectSearch::groupRangeSearch(HierGraph&, NodeMapping&, GraphMapping&, const int*, const float*, int, Collection::Array&, int&, int&)::carrier::carrier(int, int, float, const Collection::Array&)’:
+hierobjsearch.cc:447:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+                 m_path.append((void*)m_nid);
+                                      ^
+hierobjsearch.cc: In static member function ‘static void HierObjectSearch::groupRangeSearch(HierGraph&, NodeMapping&, GraphMapping&, const int*, const float*, int, Collection::Array&, int&, int&)’:
+hierobjsearch.cc:497:43: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+         if (visited[c->m_q]->in((void*)c->m_nid))
+                                           ^
+hierobjsearch.cc:506:43: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+         visited[c->m_q]->insert((void*)c->m_nid);
+                                           ^
+hierobjsearch.cc:532:61: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+                     visited[newc->m_q]->remove((void*)newc->m_nid);
+                                                             ^
+hierobjsearch.cc:558:59: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+             pending[c->m_q]->put(edge->m_neighbor, (void*)idist);
+                                                           ^
+hierobjsearch.cc: In constructor ‘HierObjectSearch::groupKNNSearch(HierGraph&, NodeMapping&, GraphMapping&, const int*, int, int, Collection::Array&, int&, int&)::carrier::carrier(int, int, float)’:
+hierobjsearch.cc:650:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+                 m_path.append((void*)m_nid);
+                                      ^
+hierobjsearch.cc: In constructor ‘HierObjectSearch::groupKNNSearch(HierGraph&, NodeMapping&, GraphMapping&, const int*, int, int, Collection::Array&, int&, int&)::carrier::carrier(int, int, float, const Collection::Array&)’:
+hierobjsearch.cc:655:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+                 m_path.append((void*)m_nid);
+                                      ^
+hierobjsearch.cc: In static member function ‘static void HierObjectSearch::groupKNNSearch(HierGraph&, NodeMapping&, GraphMapping&, const int*, int, int, Collection::Array&, int&, int&)’:
+hierobjsearch.cc:705:43: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+         if (visited[c->m_q]->in((void*)c->m_nid))
+                                           ^
+hierobjsearch.cc:714:43: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+         visited[c->m_q]->insert((void*)c->m_nid);
+                                           ^
+hierobjsearch.cc:733:43: error: cast from ‘void*’ to ‘int’ loses precision [-fpermissive]
+             int subnetid = (int)hits.get(i);
+                                           ^
+hierobjsearch.cc:740:61: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+                     visited[newc->m_q]->remove((void*)newc->m_nid);
+                                                             ^
+hierobjsearch.cc:760:67: error: cast from ‘void*’ to ‘int’ loses precision [-fpermissive]
+             int idist = (int)pending[c->m_q]->get(edge->m_neighbor);
+                                                                   ^
+hierobjsearch.cc:766:59: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+             pending[c->m_q]->put(edge->m_neighbor, (void*)idist);
+                                                           ^
+hierobjsearch.cc:775:43: error: cast from ‘void*’ to ‘int’ loses precision [-fpermissive]
+             int subnetid = (int)wait.get(i);
+                                           ^
+hierobjsearch.cc:789:39: error: cast from ‘void*’ to ‘int’ loses precision [-fpermissive]
+             int oid = (int)objs->get(j);
+                                       ^
+hierobjsearch.cc: In constructor ‘HierObjectSearch::groupKNNSearch(HierGraph&, NodeMapping&, GraphMapping&, const int*, int, int, Collection::Array&, int&, int&, Collection::Array&)::carrier::carrier(int, int, float)’:
+hierobjsearch.cc:857:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+                 m_path.append((void*)m_nid);
+                                      ^
+hierobjsearch.cc: In constructor ‘HierObjectSearch::groupKNNSearch(HierGraph&, NodeMapping&, GraphMapping&, const int*, int, int, Collection::Array&, int&, int&, Collection::Array&)::carrier::carrier(int, int, float, const Collection::Array&)’:
+hierobjsearch.cc:862:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+                 m_path.append((void*)m_nid);
+                                      ^
+hierobjsearch.cc: In static member function ‘static void HierObjectSearch::groupKNNSearch(HierGraph&, NodeMapping&, GraphMapping&, const int*, int, int, Collection::Array&, int&, int&, Collection::Array&)’:
+hierobjsearch.cc:912:43: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+         if (visited[c->m_q]->in((void*)c->m_nid))
+                                           ^
+hierobjsearch.cc:924:42: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+             if (visited[i]->in((void*)c->m_nid))
+                                          ^
+hierobjsearch.cc:927:51: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+         if (!inserted) a_visited.append((void*)c->m_nid);
+                                                   ^
+hierobjsearch.cc:929:43: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+         visited[c->m_q]->insert((void*)c->m_nid);
+                                           ^
+hierobjsearch.cc:956:61: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+                     visited[newc->m_q]->remove((void*)newc->m_nid);
+                                                             ^
+hierobjsearch.cc:982:59: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+             pending[c->m_q]->put(edge->m_neighbor, (void*)idist);
+                                                           ^
+make: *** [hierobjsearch.o] Error 1
